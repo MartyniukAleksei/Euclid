@@ -1,0 +1,443 @@
+@font-face {
+  font-family: "montserrat";
+  src: url("../fonts/montserrat-regular-webfont.woff2") format("woff2"),
+    url("../fonts/montserrat-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("../fonts/montserrat-semibold-webfont.woff2") format("woff2"),
+    url("../fonts/montserrat-semibold-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("../fonts/montserrat-bold-webfont.woff2") format("woff2"),
+    url("../fonts/montserrat-bold-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("../fonts/montserrat-extrabold-webfont.woff2") format("woff2"),
+    url("../fonts/montserrat-extrabold-webfont.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+  color: #333333;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  color: #333333;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+.btn {
+  background-color: #ff9900;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/*Header*/
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: #fff;
+  box-shadow: 0px 5px 40px 0px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 224px;
+  height: 72px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 35px;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 18px;
+  color: #333333;
+  line-height: 1;
+}
+
+.search-button {
+  height: 24px;
+  width: 24px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-image: url("../img/search.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+/*Hero*/
+
+.hero-content {
+  height: 620px;
+  background-image: url("../img/low-angle-photo-of-balconies-2462015\ 1.jpg");
+  background-repeat: no-repeat;
+  padding-left: 80px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.hero-heading {
+  display: flex;
+  max-width: 837px;
+  font-size: 70px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.hero-description {
+  display: flex;
+  max-width: 790px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.hero-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 78px;
+  font-weight: 600;
+  font-size: 23.46px;
+  line-height: 1;
+  margin-top: 100px;
+}
+
+/*About-Us*/
+
+.about-us-container {
+  margin-top: 100px;
+}
+
+.about-us-more-container {
+  display: flex;
+  gap: 32px;
+}
+
+.about-us-description {
+  width: 1235px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  line-height: 32px;
+}
+
+.about-us-more {
+  background: url("../img/About-Us-bg.jpg") center center no-repeat;
+  width: 50%; /*868px*/
+  height: 622px;
+}
+
+.about-us-more-content {
+  display: flex;
+  align-items: center;
+  height: 196px;
+  margin-top: 426px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.about-us-more-description {
+  color: #fff;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: auto;
+}
+
+.more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 19px 38px;
+  background-color: transparent;
+  border: 3px solid #f90;
+  margin-top: 68px;
+  margin-bottom: 68px;
+}
+
+.section-more-list {
+  width: 50%;
+}
+
+.section-more-item {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  /*width: 870px;*/
+  height: 295px;
+  padding: 65px 120px 65px 60px;
+  border: 1px solid #cacaca;
+}
+
+.section-more-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.section-more-item-content {
+  width: 450px;
+}
+
+.section-more-item-heading {
+  margin-bottom: 8px;
+}
+
+.section-more-item-img {
+  outline: none;
+}
+
+.section-more-item-description {
+  line-height: 32px;
+}
+
+/*How We Work*/
+
+.how-we-work-container {
+  margin-top: 100px;
+}
+
+.how-we-work-heading {
+  margin-bottom: 50px;
+}
+
+.how-we-work-list {
+  display: flex;
+  gap: 85px;
+  margin-bottom: 45px;
+}
+
+.how-we-work-link {
+  color: #333;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.is_active {
+  color: #e1670e;
+}
+
+.how-we-work-content {
+  display: flex;
+  gap: 152px;
+}
+
+.how-we-work-consultation {
+  width: 758px;
+}
+
+.how-we-work-consultation-heading {
+  margin-bottom: 8px;
+}
+
+.how-we-work-consultation-description {
+  line-height: 32px;
+  margin-bottom: 70px;
+}
+
+.how-we-work-consultation-btn-more {
+  padding: 19px 38px;
+  margin-right: 32px;
+}
+
+.how-we-work-consultation-btn-treaty {
+  padding: 19px 38px;
+  background-color: #fff;
+  color: #333333;
+  border: 1px solid #333;
+}
+
+.how-we-work-img {
+  background: url("../img/how-we-workbg.jpg") no-repeat center center;
+  background-size: contain;
+  width: 870px;
+  height: 460px;
+}
+
+/*Questions*/
+
+.questions-container {
+  margin-top: 100px;
+}
+
+.questions-heading {
+  margin-bottom: 32px;
+}
+
+.questions-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 39px;
+  border-bottom: 1px solid #cacaca;
+  cursor: pointer;
+}
+
+.questions-item:nth-child(1) {
+  padding-top: 39px;
+  border-top: 1px solid #cacaca;
+}
+
+/*Footer*/
+
+.footer-container {
+  margin-top: 100px;
+  background-color: #222;
+  height: 594px;
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer-container-left {
+  margin-right: 350px;
+}
+
+.footer-left-logo {
+  display: flex;
+  width: 224px;
+  height: 72px;
+  margin-bottom: 20px;
+}
+
+.footer-left-logo-img {
+  size: 100%;
+}
+
+.footer-left-heading {
+  color: #cacaca;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 36px;
+}
+
+.footer-left-list {
+  margin-bottom: 90px;
+}
+
+.footer-left-list-item {
+  display: flex;
+  align-items: center;
+  width: 76px;
+  height: 36px;
+}
+
+.footer-left-list-link {
+  color: #cacaca;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.footer-left-media-list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.footer-left-media-icon {
+  display: flex;
+  width: 60px;
+  height: 60px;
+}
+
+.footer-left-media-icon-git-hub {
+  background: url("../img/github-icon.svg") no-repeat center center;
+  background-size: 100%;
+}
+
+.footer-left-media-icon-email {
+  width: 55px;
+  background: url("../img/Email.svg") no-repeat center center;
+  background-size: 100%;
+}
+
+.footer-container-center {
+  margin-right: 236px;
+}
