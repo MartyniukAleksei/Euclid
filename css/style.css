@@ -606,7 +606,7 @@ img {
 
   .about-us-more-container {
     flex-direction: column;
-    gap: 0;
+    gap: 32px;
   }
 
   .about-us-more {
@@ -752,7 +752,7 @@ img {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 550px) {
   .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -816,7 +816,6 @@ img {
   }
 
   .about-us-more {
-    background-image: url("../img/About-Us-320px.png");
     height: 200px;
   }
 
@@ -837,8 +836,9 @@ img {
   .more-btn {
     color: #f90;
     font-size: 12px;
-    padding: 11px 14px 14px 15px;
+    padding: 14px 15px;
     margin: 0;
+    max-width: 168px;
     margin-right: 128px;
   }
 
@@ -877,7 +877,6 @@ img {
 
   .how-we-work-list {
     margin-bottom: 16px;
-    max-width: 185px;
   }
 
   .how-we-work-link {
@@ -885,7 +884,6 @@ img {
   }
 
   .how-we-work-img {
-    background-image: url("../img/how-we-work320.png");
     width: 100%;
     height: 160px;
   }
@@ -899,13 +897,13 @@ img {
   }
 
   .how-we-work-consultation-btn-more {
-    padding: 11px 36px 17px 37px;
+    padding: 14px 36px;
     font-size: 12px;
     margin-right: 10px;
   }
 
   .how-we-work-consultation-btn-treaty {
-    padding: 11px 14px 14px 15px;
+    padding: 11px 14px;
     font-size: 12px;
   }
 
@@ -938,7 +936,7 @@ img {
 
   .footer-container {
     align-items: center;
-    height: 673px;
+    min-height: 673px;
     margin-top: 60px;
   }
 
@@ -961,7 +959,6 @@ img {
   .footer-btn-submit {
     font-size: 12px;
     margin-right: 0;
-    padding: 12px 24px;
   }
 
   .footer-checkbox-div {
