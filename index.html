@@ -4,6 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=0.8" />
     <title>Евклид</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        $("#accordion").accordion({
+          collapsible: true,
+        });
+        $("#accordion").accordion("option", "icons", null);
+        $("#accordion").accordion({
+          collapsible: true, // Делает все вкладыши закрываемыми
+          active: false, // Устанавливает все вкладыши в закрытое состояние по умолчанию
+        });
+      });
+    </script>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -17,19 +44,19 @@
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="" class="nav-link">О нас</a>
+              <a href="" class="nav-link before_link_anim is_active">О нас</a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link">Проекты</a>
+              <a href="" class="nav-link before_link_anim">Проекты</a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link">Этапы</a>
+              <a href="" class="nav-link before_link_anim">Этапы</a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link">Отзывы</a>
+              <a href="" class="nav-link before_link_anim">Отзывы</a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link">Контакты</a>
+              <a href="" class="nav-link before_link_anim">Контакты</a>
             </li>
           </ul>
           <button class="search-button"></button>
@@ -40,6 +67,27 @@
     <main class="main">
       <section class="section-hero">
         <div class="container hero-container">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div
+                class="swiper-slide"
+                style="background-image: url(img/Hero.jpg)"
+              ></div>
+              <div
+                class="swiper-slide"
+                style="background-image: url(img/Hero_2.jpg)"
+              ></div>
+              <div
+                class="swiper-slide"
+                style="background-image: url(img/Hero_3.png)"
+              ></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- Slider main container -->
           <div class="hero-content">
             <strong class="hero-heading"
               >Проектные решения любой сложности</strong
@@ -51,6 +99,22 @@
             <a href="" class="btn hero-btn">Заказать расчёт</a>
           </div>
         </div>
+
+        <script>
+          const swiper = new Swiper(".swiper", {
+            autoplay: {
+              delay: 5000,
+              disableOnInteraction: false,
+            },
+            // Optional parameters
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+              el: ".swiper-pagination",
+            },
+          });
+        </script>
       </section>
 
       <section class="section-about-us">
@@ -205,20 +269,40 @@
           <h1 class="how-we-work-heading">Как мы работаем</h1>
           <ul class="how-we-work-list">
             <li class="how-we-work-item">
-              <a href="" class="how-we-work-link is_active">1 шаг</a>
+              <button
+                class="how-we-work-link before_link_anim is_active"
+                data-path="one"
+              >
+                1 шаг
+              </button>
             </li>
             <li class="how-we-work-item">
-              <a href="" class="how-we-work-link">2 шаг</a>
+              <button class="how-we-work-link before_link_anim" data-path="two">
+                2 шаг
+              </button>
             </li>
             <li class="how-we-work-item">
-              <a href="" class="how-we-work-link">3 шаг</a>
+              <button
+                class="how-we-work-link before_link_anim"
+                data-path="three"
+              >
+                3 шаг
+              </button>
             </li>
             <li class="how-we-work-item">
-              <a href="" class="how-we-work-link">4 шаг</a>
+              <button
+                class="how-we-work-link before_link_anim"
+                data-path="four"
+              >
+                4 шаг
+              </button>
             </li>
           </ul>
           <div class="how-we-work-content">
-            <div class="how-we-work-consultation">
+            <div
+              class="how-we-work-consultation-none how-we-work-consultation"
+              data-target="one"
+            >
               <h2 class="how-we-work-consultation-heading">
                 Проводим консультацию
               </h2>
@@ -244,7 +328,74 @@
                 >Договор</a
               >
             </div>
-            <div class="how-we-work-img"></div>
+            <div class="how-we-work-consultation-none" data-target="two">
+              <h2 class="how-we-work-consultation-heading">Составляем смету</h2>
+              <p class="how-we-work-consultation-description">
+                Внедрения и модернизации приоритизации разума над эмоциями. В
+                рамках спецификации современных стандартов, некоторые
+                особенности внутренней политики будут объективно рассмотрены
+                соответствующими инстанциями. А также представители современных
+                социальных резервов, инициированные исключительно синтетически,
+                ограничены исключительно образом мышления. Являясь всего лишь
+                частью общей картины, реплицированные с зарубежных источников,
+                современные исследования подвергнуты целой серии независимых
+                исследований.
+              </p>
+              <a href="" class="btn how-we-work-consultation-btn-more"
+                >Подробнее</a
+              >
+              <a href="" class="btn how-we-work-consultation-btn-treaty"
+                >Договор</a
+              >
+            </div>
+            <div class="how-we-work-consultation-none" data-target="three">
+              <h2 class="how-we-work-consultation-heading">
+                Привлекаем подрядчиков
+              </h2>
+              <p class="how-we-work-consultation-description">
+                Идейные соображения высшего порядка, а также новая модель
+                организационной деятельности требует анализа прогресса
+                профессионального сообщества. Высокий уровень вовлечения
+                представителей целевой аудитории является четким доказательством
+                простого факта: высококачественный прототип будущего проекта
+                напрямую зависит от дальнейших направлений развития.
+                Разнообразный и богатый опыт говорит нам, что новая модель
+                организационной деятельности говорит о возможностях системы
+                массового участия. Принимая во внимание показатели успешности,
+                постоянное информационно-пропагандистское обеспечение нашей
+                деятельности позволяет выполнить важные задания по разработке
+                прогресса профессионального сообщества.
+              </p>
+              <a href="" class="btn how-we-work-consultation-btn-more"
+                >Подробнее</a
+              >
+              <a href="" class="btn how-we-work-consultation-btn-treaty"
+                >Договор</a
+              >
+            </div>
+            <div class="how-we-work-consultation-none" data-target="four">
+              <h2 class="how-we-work-consultation-heading">
+                Инспектируем все этапы работ
+              </h2>
+              <p class="how-we-work-consultation-description">
+                Высокий уровень вовлечения представителей целевой аудитории
+                является четким доказательством простого факта:
+                высококачественный прототип будущего проекта напрямую зависит от
+                дальнейших направлений развития. Разнообразный и богатый опыт
+                говорит нам, что новая модель организационной деятельности
+                говорит о возможностях системы массового участия. Принимая во
+                внимание показатели успешности, постоянное
+                информационно-пропагандистское обеспечение нашей деятельности
+                позволяет.
+              </p>
+              <a href="" class="btn how-we-work-consultation-btn-more"
+                >Подробнее</a
+              >
+              <a href="" class="btn how-we-work-consultation-btn-treaty"
+                >Договор</a
+              >
+            </div>
+            <div class="how-we-work-img one"></div>
           </div>
         </div>
       </section>
@@ -252,9 +403,9 @@
       <section class="section-questions">
         <div class="container questions-container">
           <h1 class="questions-heading">Часто задаваемые вопросы</h1>
-          <ul class="questions-list">
-            <li class="questions-item">
-              <h2 class="questions-item-heading">
+          <div id="accordion">
+            <div class="questions-item">
+              <h2 class="questions-item-heading before_link_anim">
                 Из чего формируется конечная стоимость проекта?
               </h2>
               <svg
@@ -273,9 +424,30 @@
                   fill="#666666"
                 />
               </svg>
-            </li>
-            <li class="questions-item">
-              <h2 class="questions-item-heading">
+            </div>
+            <div class="questions-item-content">
+              Являясь всего лишь частью общей картины, непосредственные
+              участники технического прогресса призывают нас к новым свершениям,
+              которые, в свою очередь, должны быть своевременно верифицированы.
+              Но высококачественный прототип будущего проекта является
+              качественно новой ступенью первоочередных требований. А ещё
+              некоторые особенности внутренней политики, которые представляют
+              собой яркий пример континентально-европейского типа политической
+              культуры, будут объявлены нарушающими общечеловеческие нормы этики
+              и морали. И нет сомнений, что явные признаки победы
+              институционализации призывают нас к новым свершениям, которые, в
+              свою очередь, должны быть указаны как претенденты на роль ключевых
+              факторов. Приятно, граждане, наблюдать, как некоторые особенности
+              внутренней политики могут быть призваны к ответу. Явные признаки
+              победы институционализации набирают популярность среди
+              определенных слоев населения, а значит, должны быть объединены в
+              целые кластеры себе подобных. Банальные, но неопровержимые выводы,
+              а также многие известные личности призывают нас к новым
+              свершениям, которые, в свою очередь, должны быть представлены в
+              исключительно положительном свете.
+            </div>
+            <div class="questions-item">
+              <h2 class="questions-item-heading before_link_anim">
                 У меня есть свой проект. Сможем ли мы его доработать /
                 реализовать?
               </h2>
@@ -295,9 +467,10 @@
                   fill="#666666"
                 />
               </svg>
-            </li>
-            <li class="questions-item">
-              <h2 class="questions-item-heading">
+            </div>
+            <div class="questions-item-content">Да</div>
+            <div class="questions-item">
+              <h2 class="questions-item-heading before_link_anim">
                 Я выбираю между разными компаниями. В чём ваше отличие?
               </h2>
               <svg
@@ -316,9 +489,10 @@
                   fill="#666666"
                 />
               </svg>
-            </li>
-            <li class="questions-item">
-              <h2 class="questions-item-heading">
+            </div>
+            <div class="questions-item-content">У нас лучший верстальщик</div>
+            <div class="questions-item">
+              <h2 class="questions-item-heading before_link_anim">
                 Могу ли я делегировать вам работу / согласование с подрядчиком /
                 организацией?
               </h2>
@@ -338,9 +512,10 @@
                   fill="#666666"
                 />
               </svg>
-            </li>
-            <li class="questions-item">
-              <h2 class="questions-item-heading">
+            </div>
+            <div class="questions-item-content">Да</div>
+            <div class="questions-item">
+              <h2 class="questions-item-heading before_link_anim">
                 Могу ли я вернуть деньги на каком-либо из этапов работ?
               </h2>
               <svg
@@ -359,8 +534,9 @@
                   fill="#666666"
                 />
               </svg>
-            </li>
-          </ul>
+            </div>
+            <div class="questions-item-content">Нет</div>
+          </div>
         </div>
       </section>
     </main>
@@ -374,22 +550,32 @@
           <p class="footer-left-heading">О нас</p>
           <ul class="footer-left-list">
             <li class="footer-left-list-item">
-              <a href="" class="footer-left-list-link">Проекты</a>
+              <a href="" class="footer-left-list-link before_link_anim"
+                >Проекты</a
+              >
             </li>
             <li class="footer-left-list-item">
-              <a href="" class="footer-left-list-link">Отзывы</a>
+              <a href="" class="footer-left-list-link before_link_anim"
+                >Отзывы</a
+              >
             </li>
             <li class="footer-left-list-item">
-              <a href="" class="footer-left-list-link">Договор оферты</a>
+              <a href="" class="footer-left-list-link before_link_anim"
+                >Договор оферты</a
+              >
             </li>
             <li class="footer-left-list-item">
-              <a href="" class="footer-left-list-link">Договор подряда</a>
+              <a href="" class="footer-left-list-link before_link_anim"
+                >Договор подряда</a
+              >
             </li>
             <li class="footer-left-list-item">
-              <a href="" class="footer-left-list-link">Конфиденциальность</a>
+              <a href="" class="footer-left-list-link before_link_anim"
+                >Конфиденциальность</a
+              >
             </li>
             <li class="footer-left-list-item">
-              <a href="" class="footer-left-list-link"
+              <a href="" class="footer-left-list-link before_link_anim"
                 >Партнёрское соглашение</a
               >
             </li>
@@ -471,5 +657,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/tabs.js"></script>
   </body>
 </html>
